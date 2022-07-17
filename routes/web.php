@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/sample/{id}', '\App\Http\Controllers\Sample\IndexController@showId');
+Route::get('/sample/show', '\App\Http\Controllers\Sample\IndexController@show');
+Route::get('/tweet', '\App\Http\Controllers\Tweet\IndexController');
+
